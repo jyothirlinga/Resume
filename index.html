@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Siva - DevOps Journey</title>
+  <title>Jyothirlinga Siva - DevOps SRE</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -17,35 +17,189 @@
       background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
       background-attachment: fixed;
       font-family: 'Poppins', sans-serif;
-      text-align: center;
       color: #333;
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       padding: 20px;
     }
 
     .container {
-      perspective: 1000px;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .card {
+    .header {
       background: rgba(255, 255, 255, 0.95);
       padding: 50px 40px;
       border-radius: 20px;
-      width: 100%;
-      max-width: 400px;
+      margin-bottom: 30px;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(10px);
+      text-align: center;
       animation: slideUp 0.6s ease-out;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .title {
+      font-size: 20px;
+      color: #667eea;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .contact-info a {
+      color: #667eea;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: #764ba2;
+      text-decoration: underline;
+    }
+
+    .section {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      animation: slideUp 0.8s ease-out;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      margin-bottom: 25px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #e8e8e8;
+    }
+
+    .summary {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #666;
+    }
+
+    .experience-item {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    .experience-item:last-child {
+      border-bottom: none;
+    }
+
+    .company {
+      font-weight: 700;
+      font-size: 18px;
+      color: #667eea;
+      margin-bottom: 5px;
+    }
+
+    .role {
+      font-weight: 600;
+      font-size: 16px;
+      color: #764ba2;
+      margin-bottom: 5px;
+    }
+
+    .duration {
+      font-size: 14px;
+      color: #999;
+      margin-bottom: 10px;
+    }
+
+    .duties {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.8;
+      margin-left: 20px;
+    }
+
+    .duties li {
+      margin: 8px 0;
+    }
+
+    .education-item {
+      margin-bottom: 25px;
+      padding: 20px;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+      border-left: 4px solid #667eea;
+      border-radius: 8px;
+    }
+
+    .degree {
+      font-weight: 700;
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .institution {
+      font-size: 15px;
+      color: #667eea;
+      margin-bottom: 5px;
+    }
+
+    .education-year {
+      font-size: 14px;
+      color: #999;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    .skill-item {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 600;
+      color: #667eea;
+      border: 2px solid rgba(102, 126, 234, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .skill-item:hover {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+    }
+
+    .cert-item {
+      background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(118, 75, 162, 0.1));
+      padding: 15px;
+      border-radius: 10px;
+      color: #764ba2;
+      border-left: 4px solid #f093fb;
+      font-weight: 600;
+      margin-bottom: 12px;
     }
 
     @keyframes slideUp {
@@ -59,128 +213,30 @@
       }
     }
 
-    .greeting {
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      margin-bottom: 15px;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: fadeIn 0.8s ease-out;
-    }
-
-    .emoji-large {
-      font-size: 60px;
-      display: block;
-      margin: 15px 0;
-      animation: bounce 1.5s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-
-    .intro {
-      font-size: 18px;
-      color: #666;
-      line-height: 1.6;
-      margin: 20px 0 30px;
-      font-weight: 300;
-    }
-
-    .intro-highlight {
-      font-weight: 600;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .divider {
-      height: 3px;
-      background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
-      border-radius: 2px;
-      margin: 25px auto;
-      width: 60px;
-    }
-
-    .button-container {
-      margin-top: 30px;
-    }
-
-    button {
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      border: none;
-      padding: 14px 40px;
-      border-radius: 50px;
-      color: white;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      font-family: 'Poppins', sans-serif;
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-      position: relative;
-      overflow: hidden;
-    }
-
-    button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #764ba2, #f093fb);
-      transition: left 0.3s ease;
-      z-index: -1;
-    }
-
-    button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 35px rgba(102, 126, 234, 0.6);
-      letter-spacing: 0.5px;
-    }
-
-    button:active {
-      transform: translateY(-1px);
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .card {
-        padding: 40px 25px;
+    @media (max-width: 600px) {
+      .header {
+        padding: 30px 20px;
       }
 
-      .greeting {
-        font-size: 38px;
+      .header h1 {
+        font-size: 36px;
       }
 
-      .emoji-large {
-        font-size: 48px;
+      .section {
+        padding: 25px 20px;
       }
 
-      .intro {
-        font-size: 16px;
+      .section h2 {
+        font-size: 24px;
       }
 
-      button {
-        padding: 12px 30px;
-        font-size: 15px;
+      .contact-info {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       }
     }
   </style>
@@ -190,23 +246,112 @@
 <body>
 
   <div class="container">
-    <div class="card">
-      <h1 class="greeting">Hello Mama</h1>
-      <span class="emoji-large">😄</span>
-      <div class="divider"></div>
-      <p class="intro">I am <span class="intro-highlight">Siva</span> <span style="font-size: 18px;">🚀</span></p>
-      <p class="intro">Learning <span class="intro-highlight">DevOps</span> & Cloud Technologies</p>
-      <div class="button-container">
-        <button onclick="showMsg()">✨ Click Me</button>
+    <!-- Header Section -->
+    <div class="header">
+      <h1>Jyothirlinga Siva</h1>
+      <div class="title">🚀 DevOps SRE | Technology Lead | Cloud & Infrastructure Expert</div>
+      <div class="contact-info">
+        <span>📧 <a href="mailto:salasivababu@gmail.com">salasivababu@gmail.com</a></span>
+        <span>📱 +91 7013093170</span>
+        <span>🔗 <a href="https://www.linkedin.com/in/siva-babu" target="_blank">LinkedIn Profile</a></span>
+        <span>📍 Hyderabad</span>
       </div>
     </div>
-  </div>
 
-  <script>
-    function showMsg() {
-      alert("Welcome Mama 🔥\n\nKeeping up the great work with DevOps!");
-    }
-  </script>
+    <!-- Professional Summary -->
+    <div class="section">
+      <h2>Professional Summary</h2>
+      <p class="summary">
+        Dedicated technology professional with a Bachelor's in Engineering and extensive experience in DevOps and Application Production Support. 
+        Skilled in VMware, cloud platforms, and CI/CD tools with a strong focus on high availability and effective monitoring. 
+        Expert in both Windows and Linux environments with proven track record of implementing automation solutions to streamline operations. 
+        Proficient in SRE principles, SLA/SLO/SLI management, and Error Budget concepts for ensuring optimal system reliability.
+      </p>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="section">
+      <h2>Professional Experience</h2>
+
+      <div class="experience-item">
+        <div class="company">Infosys</div>
+        <div class="role">Technology Lead</div>
+        <div class="duration">Mar 2022 – Present</div>
+        <ul class="duties">
+          <li>Comprehensive understanding of SRE principles contributing to project efficiency and reliability</li>
+          <li>Excellent leadership and communication skills with keen attention to detail</li>
+          <li>Designing and implementing CI/CD pipelines for application deployment using Bamboo and Harness</li>
+          <li>Application production support (IaaS and PaaS) with automation using PowerShell scripting</li>
+          <li>Building advanced monitoring solutions utilizing Splunk, ITRS Geneos, and Grafana</li>
+          <li>Implementing SLO, SLI and Error budget Concepts for reliability and scalability</li>
+          <li>Strong expertise in both Windows Server and Linux Server administration</li>
+          <li>Practical application of ITIL processes and Agile methodologies</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="company">HCL Technology</div>
+        <div class="role">Analyst</div>
+        <div class="duration">Oct 2019 – Mar 2022</div>
+        <ul class="duties">
+          <li>Monitoring VMware environments including ESXi hosts and vCenter for performance optimization</li>
+          <li>Handling troubleshooting for VMware server problems and escalation management</li>
+          <li>Performing lifecycle management tasks including VM snapshots, reboots, and updates</li>
+          <li>Creating and maintaining operational reports for infrastructure health verification</li>
+          <li>Providing L1 support for incidents and service requests</li>
+          <li>Supporting virtual machine provisioning, cloning, and storage management</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section">
+      <h2>Education</h2>
+      <div class="education-item">
+        <div class="degree">Bachelor of Technology (B.Tech)</div>
+        <div class="institution">Swarnandhra College of Engineering & Technology, Hyderabad</div>
+        <div class="education-year">July 2016 – Mar 2019</div>
+      </div>
+    </div>
+
+    <!-- Certifications Section -->
+    <div class="section">
+      <h2>Certifications</h2>
+      <div class="cert-item">✓ Infosys Certified Site Reliability Engineer</div>
+      <div class="cert-item">✓ Google Associate Cloud Engineer (ACE)</div>
+      <div class="cert-item">✓ Infosys Certified in ITIL-V4</div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section">
+      <h2>Core Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item">CI/CD</div>
+        <div class="skill-item">DevOps</div>
+        <div class="skill-item">Bamboo</div>
+        <div class="skill-item">Harness</div>
+        <div class="skill-item">Linux</div>
+        <div class="skill-item">Windows Admin</div>
+        <div class="skill-item">VMware</div>
+        <div class="skill-item">Docker</div>
+        <div class="skill-item">Kubernetes</div>
+        <div class="skill-item">PowerShell</div>
+        <div class="skill-item">Git/GitHub</div>
+        <div class="skill-item">Bitbucket</div>
+        <div class="skill-item">Jenkins</div>
+        <div class="skill-item">Terraform</div>
+        <div class="skill-item">Ansible</div>
+        <div class="skill-item">AWS/Cloud</div>
+        <div class="skill-item">Splunk</div>
+        <div class="skill-item">Grafana</div>
+        <div class="skill-item">Monitoring Tools</div>
+        <div class="skill-item">SRE Principles</div>
+        <div class="skill-item">ITIL</div>
+        <div class="skill-item">Agile</div>
+      </div>
+    </div>
+
+  </div>
 
 </body>
 </html>
